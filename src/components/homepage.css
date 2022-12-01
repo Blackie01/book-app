@@ -1,0 +1,74 @@
+.navigation-bar{
+    background-color: #012928ff;
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+    align-items: center;
+    padding: 0 20px 0 20px;
+    color: #fff;
+    font-size: small;
+    position: sticky;
+    top: 0;
+    
+}
+
+.nav-right{
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+}
+
+.overall-homepage-body{
+    display: flex;
+    align-items: center;
+}
+
+.wrap-text{
+    margin-left: 10px;
+}
+
+.jumbo-text-section{
+    color: #fff;
+    width: 52%;
+    margin-left: 7%;
+}
+
+.main-text{
+    font-size: 80px;
+    margin-bottom: 0px;
+
+}
+
+p{
+    margin-bottom: 30px;
+}
+
+.search-bar{
+    width: 100%;
+    height: 60px;
+    border-radius: 30px;
+    border: none; 
+    background-color: rgb(2, 39, 37);
+    /* rgb(1, 41, 39) */
+    /* border: 1px solid #1B8A83ff;
+    background-color: inherit; */
+    opacity: 0.3;
+    padding-left: 20px;
+    color: #fff;
+}
+
+.search-bar:hover{
+    scale: 1.005;
+    box-shadow: #fff;
+}
+
+
+/* This is the color pallete I found. Open to changes, obviously. */
+.color-pallete{
+   background-color: #013D3Bff;
+   background-color: #1B8A83ff;
+   background-color: #01534Fff;
+   background-color: #012322ff;
+   background-color: #012928ff;
+}
+

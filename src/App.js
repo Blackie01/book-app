@@ -1,13 +1,17 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Homepage from './components/homepage';
 
 function App() {
   return (
-    <section>
-      <h1>Is this linked?</h1>
-      <h2>This is parallax error</h2>
+    <section className="main-container">
+      <Homepage />
     </section>
   );
 }
 
 export default App;
+
+
+
+
