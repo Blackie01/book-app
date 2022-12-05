@@ -1,0 +1,134 @@
+.navigation-bar {
+  background-color: #012928ff;
+  display: flex;
+  justify-content: space-between;
+  height: 3rem;
+  align-items: center;
+  padding: 0 60px 0 60px;
+  color: #fff;
+  font-size: small;
+  position: sticky;
+  top: 0;
+}
+
+.nav-right {
+  display: flex;
+  gap: 30px;
+  list-style-type: none;
+}
+
+.overall-homepage-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.wrap-text {
+  margin-left: 10px;
+}
+
+.jumbo-text-section {
+  color: rgb(177, 201, 173);
+  width: 50vw;
+  margin-left: 2vw;
+}
+
+.main-text {
+  font-size: 75px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+p {
+  margin-bottom: 30px;
+}
+
+.search-bar {
+  width: 40vw;
+  height: 60px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgb(2, 39, 37);
+  opacity: 0.3;
+  padding-left: 20px;
+  color: #fff;
+}
+
+.search-bar:hover {
+  scale: 1.005;
+  background-color: rgb(2, 44, 42);
+}
+
+/* Images */
+
+.jumbo-images-section {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  column-gap: 20px;
+  width: 35vw;
+  margin: 13vh 0 0 0;
+  height: 80vh;
+}
+
+.image1 {
+  margin-top: 40px;
+  height: 40vh;
+  width: 16.1vw;
+  border-radius: 10px;
+}
+
+.image1 img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.image2 {
+  height: 17vh;
+  width: 11.5vw;
+  padding-right: 4.6vw;
+  border-radius: 10px;
+}
+
+.image2 img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.image3 {
+  height: 17vh;
+  width: 11.5vw;
+  padding-left: 4.6vw;
+  border-radius: 10px;
+  margin-top: -40px;
+}
+
+.image3 img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.image4 {
+  margin-top: -240px;
+  height: 55vh;
+  width: 16.1vw;
+  border-radius: 10px;
+}
+
+.image4 img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* This is the color pallete I found. Open to changes, obviously. */
+.color-pallete {
+  background-color: #013d3bff;
+  background-color: #1b8a83ff;
+  background-color: #01534fff;
+  background-color: #012322ff;
+  background-color: #012928ff;
+}
