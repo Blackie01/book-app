@@ -11,6 +11,7 @@ function Homepage() {
             <li>About</li>
             <li>Contributors</li>
             <li>API docs</li>
+            <li>Sign up</li>
           </ul>
         </section>
       </nav>
