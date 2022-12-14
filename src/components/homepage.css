@@ -28,7 +28,7 @@
 }
 
 .jumbo-text-section {
-  color: rgb(177, 201, 173);
+  color: #b1c9ad;
   width: 50vw;
   margin-left: 2vw;
 }
@@ -39,24 +39,47 @@
   margin-top: 0px;
 }
 
+.brbr{
+  display: none;
+}
+
 p {
   margin-bottom: 30px;
 }
 
+form{
+  display: flex;
+  justify-content: center;
+}
+
 .search-bar {
-  width: 40vw;
+  width: 50vw;
   height: 60px;
   border-radius: 30px;
   border: none;
-  background-color: rgb(2, 39, 37);
+  background-color: #022725;
   opacity: 0.3;
   padding-left: 20px;
   color: #fff;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  
 }
 
 .search-bar:hover {
   scale: 1.005;
   background-color: rgb(2, 44, 42);
+}
+
+.searchIcon{
+ height: 35px;
+ width: 35px;
+ margin-right: 20px;
+}
+
+input:focus{
+  outline: none;
 }
 
 /* Images */
@@ -112,7 +135,8 @@ p {
 }
 
 .image4 {
-  margin-top: -240px;
+  /* margin-top: -240px; */
+  margin-top: -36vh;
   height: 55vh;
   width: 16.1vw;
   border-radius: 10px;
@@ -131,4 +155,84 @@ p {
   background-color: #01534fff;
   background-color: #012322ff;
   background-color: #012928ff;
+}
+
+/* Responsiveness */
+
+@media only screen and (max-width:768px) {
+
+  .overall-homepage-section{
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .navigation-bar {
+    padding: 0 10px 0 10px;
+    position: -webkit-sticky;
+    top: 0;
+  }
+
+  .navigation-bar h2{
+    font-size: 15px;
+  }
+
+  .nav-right {
+    display: none;
+  }
+
+  .overall-homepage-body {
+    display: block;
+  }
+
+  .jumbo-text-section {
+    width: 100vw;
+    align-items: center;
+    text-align: center;
+    margin-top: 10vh;
+    margin-left: 0;
+  }
+  
+  .main-text {
+    font-size: 50px;
+    margin-bottom: 30px;
+    margin-top: 0px;
+  }
+
+  .brbr{
+    display: block;
+  }
+  
+  p {
+    margin-bottom: 40px;
+  }
+
+  .search-bar {
+    width: 80vw;
+  }
+
+  .jumbo-images-section {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin-top: 20px;
+    height: 34vh;
+  }
+
+  .image1 {
+    display: none;
+  }
+
+  .image2 {
+    display: none;
+  }
+
+  .image3 {
+    display: none;
+  }
+  
+  .image4 {
+    margin-top: inherit;
+    height: inherit;
+    width: 200px;
+  }
 }

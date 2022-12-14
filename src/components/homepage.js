@@ -13,6 +13,7 @@ function Homepage() {
             <li>About</li>
             <li>Contributors</li>
             <li>API docs</li>
+            <li>Sign up</li>
           </ul>
         </section>
       </nav>
@@ -21,7 +22,7 @@ function Homepage() {
         <section className="jumbo-text-section">
           <div className="wrap-text">
             <h1 className="main-text">
-              Search the internet <br /> for books
+              Search <br className="brbr"/> the internet <br /> for books
             </h1>
             <p>
               Get 1,000,000 books without breaking a sweat. <br /> Type! Our
@@ -31,7 +32,16 @@ function Homepage() {
 
           <div>
             <form>
-              <input className="search-bar" type="text" />
+              
+              <div className="search-bar" type="text">
+              <input className="search-bar" placeholder="enter a title" type="text"/> 
+
+              
+              <img className="searchIcon" src="https://img.icons8.com/sf-ultralight/25/b1c9ad/search.png"/>
+              
+  
+              </div> 
+
             </form>
           </div>
           <Link to="/MoreInfo" className="more">
