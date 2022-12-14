@@ -1,0 +1,22 @@
+.navigation-bar {
+    background-color: #012928ff;
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+    align-items: center;
+    padding: 0 60px 0 60px;
+    color: #fff;
+    font-size: small;
+    position: sticky;
+    top: 0;
+  }
+  
+  .nav-right {
+    display: flex;
+    gap: 30px;
+    list-style-type: none;
+  }
+
+  .books-container {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  }

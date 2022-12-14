@@ -1,5 +1,7 @@
 import React from "react";
 import "./homepage.css";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
 
 function Homepage() {
   return (
@@ -32,6 +34,9 @@ function Homepage() {
               <input className="search-bar" type="text" />
             </form>
           </div>
+          <Link to="/MoreInfo" className="more">
+        Click Here
+          </Link>
         </section>
 
         <section className="jumbo-images-section">
