@@ -1,29 +1,10 @@
 import React from 'react'
 import "./moreInfo.css";
-import { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-const MoreInfo = () => {
-    const [Books, setBooks] = useState([]);
-    // const apiCall = () =>{
-    //     fetch("https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyBuwxHeRrb6JhyDAHqCq8lkWWazlbquHxM")
-    //     .then((response) => response.json())
-    //     .then((data) => { setBooks(data)
-    //         //console.log(Books);
-    //     })
-    //   }
-
-      const apiCall=()=>{
-        fetch("https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyBuwxHeRrb6JhyDAHqCq8lkWWazlbquHxM")
-        .then ((response) => response.json())
-        .then((data)=>setBooks(data))
-     }
-     
-     
-     useEffect (()=>apiCall(), [])
-      console.log(Books);
-      //useEffect(() => {apiCall()},  []);
+const MoreInfo = ({Books}) => {
+    let booksArray = Books.items
     //console.log(Books);
-    //https:www.googleapis.com/books/v1/volumes?q=Things fall apart&key=AIzaSyBuwxHeRrb6JhyDAHqCq8lkWWazlbquHxM
   return (
     <section>
         <nav className="navigation-bar">
@@ -37,12 +18,17 @@ const MoreInfo = () => {
             </section>
         </nav>
         <div className="books-container">
-        {/* {Books.map((book, i) => (
-              <div key={i} >
-                  
+        {booksArray.map((book, i) => (
+              <div className='books' key={i} >
+                  <img src={book.volumeInfo.imageLinks.thumbnail} alt="book" />
                   <h2>{book.volumeInfo.title}</h2>
+                  <button className="read-more">
+                      <Link to="/moreinfo">
+                        Read More
+                      </Link>
+                  </button>
               </div>
-            ))} */}
+            ))}
         </div>
     </section>
   )
@@ -50,4 +36,3 @@ const MoreInfo = () => {
 
 export default MoreInfo
 
-{/* <Link className='repo-link' style={{color:'white'}} to={`/apicall/${user.id}`} >{user.git_url}/</Link> */}
