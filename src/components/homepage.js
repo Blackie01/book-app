@@ -1,7 +1,11 @@
 import React from "react";
 import "./homepage.css";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import {useState, useEffect} from'react'
 
-function Homepage() {
+
+function Homepage({showCase, showMain}) {
+
   return (
     <section className="overall-homepage-section">
       <nav className="navigation-bar">
@@ -31,11 +35,7 @@ function Homepage() {
           <div>
             
               <div className="search-bar" type="text">
-                <input
-                  className="search-bar"
-                  placeholder="enter a title"
-                  type="text"
-                />
+              <input className="search-bar" placeholder="enter a title" type="text" onChange={showMain}/> 
 
               <button className="searchSubmit">
                 <img
@@ -47,6 +47,9 @@ function Homepage() {
              
             
           </div>
+          <Link to="/moreinfo" className="more" onClick = {showCase}>
+        Click Here
+          </Link>
         </section>
 
         <section className="jumbo-images-section">
