@@ -39,17 +39,12 @@
   margin-top: 0px;
 }
 
-.brbr{
+.brbr {
   display: none;
 }
 
 p {
   margin-bottom: 30px;
-}
-
-form{
-  display: flex;
-  justify-content: center;
 }
 
 .search-bar {
@@ -60,26 +55,38 @@ form{
   background-color: #022725;
   opacity: 0.3;
   padding-left: 20px;
-  color: #fff;
+  /* color: red; */
   display: flex;
   justify-content: end;
   align-items: center;
-  
 }
 
 .search-bar:hover {
   scale: 1.005;
-  background-color: rgb(2, 44, 42);
+  /* background-color: #022c2a; */
+  background-color: white;
+  /* background-color: #0b4946; */
 }
 
-.searchIcon{
- height: 35px;
- width: 35px;
- margin-right: 20px;
+.searchIcon {
+  height: 35px;
+  width: 35px;
+  margin-right: 20px;
 }
 
-input:focus{
+input:focus {
   outline: none;
+  color: rgb(255, 255, 255);
+  font-size: medium;
+}
+
+.searchSubmit{
+  background-color: #022725;
+  border: none;
+  height: 60px;
+  border-radius: 30px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
 }
 
 /* Images */
@@ -159,9 +166,8 @@ input:focus{
 
 /* Responsiveness */
 
-@media only screen and (max-width:768px) {
-
-  .overall-homepage-section{
+@media only screen and (max-width: 768px) {
+  .overall-homepage-section {
     width: 100vw;
     height: 100vh;
   }
@@ -172,7 +178,7 @@ input:focus{
     top: 0;
   }
 
-  .navigation-bar h2{
+  .navigation-bar h2 {
     font-size: 15px;
   }
 
@@ -191,17 +197,17 @@ input:focus{
     margin-top: 10vh;
     margin-left: 0;
   }
-  
+
   .main-text {
     font-size: 50px;
     margin-bottom: 30px;
     margin-top: 0px;
   }
 
-  .brbr{
+  .brbr {
     display: block;
   }
-  
+
   p {
     margin-bottom: 40px;
   }
@@ -229,7 +235,7 @@ input:focus{
   .image3 {
     display: none;
   }
-  
+
   .image4 {
     margin-top: inherit;
     height: inherit;

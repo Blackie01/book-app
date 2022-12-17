@@ -20,7 +20,7 @@ function Homepage() {
         <section className="jumbo-text-section">
           <div className="wrap-text">
             <h1 className="main-text">
-              Search <br className="brbr"/> the internet <br /> for books
+              Search <br className="brbr" /> the internet <br /> for books
             </h1>
             <p>
               Get 1,000,000 books without breaking a sweat. <br /> Type! Our
@@ -29,18 +29,23 @@ function Homepage() {
           </div>
 
           <div>
-            <form>
-              
+            
               <div className="search-bar" type="text">
-              <input className="search-bar" placeholder="enter a title" type="text"/> 
+                <input
+                  className="search-bar"
+                  placeholder="enter a title"
+                  type="text"
+                />
 
-              
-              <img className="searchIcon" src="https://img.icons8.com/sf-ultralight/25/b1c9ad/search.png"/>
-              
-  
-              </div> 
-
-            </form>
+              <button className="searchSubmit">
+                <img
+                  className="searchIcon"
+                  src="https://img.icons8.com/sf-ultralight/25/b1c9ad/search.png"
+                />
+              </button>
+              </div>
+             
+            
           </div>
         </section>
 
