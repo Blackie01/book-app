@@ -1,10 +1,27 @@
 import React from 'react'
 import "./moreInfo.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { useState } from 'react';
+import Pagination from './pagination';
 
 const MoreInfo = ({Books}) => {
     let booksArray = Books.items
-    //console.log(Books);
+  console.log(booksArray);
+    //States for pagination
+
+    const [currentPage, setCurrentPage] = useState(1);
+    const [BooksPerPage] = useState(10);
+    
+
+    //Pagination Variables
+    const indexOfLastBooks = currentPage * BooksPerPage;
+    const indexOfFirstBooks = indexOfLastBooks - BooksPerPage;
+    const currentBooks = booksArray?.slice(indexOfFirstBooks, indexOfLastBooks);
+
+    const paginate = (pageNumber) => {
+      setCurrentPage(pageNumber)
+  };
+
   return (
     <section>
         <nav className="navigation-bar">
@@ -18,9 +35,9 @@ const MoreInfo = ({Books}) => {
             </section>
         </nav>
         <div className="books-container">
-        {booksArray.map((book, i) => (
+        {currentBooks.map((book, i) => (
               <div className='books' key={i} >
-                  <img src={book.volumeInfo.imageLinks.thumbnail} alt="book" />
+                  <img src={book.volumeInfo.imageLinks.thumbnail} alt="book" key={i}/>
                   <h2>{book.volumeInfo.title}</h2>
                   <button className="read-more">
                       <Link to="/moreinfo">
@@ -30,6 +47,13 @@ const MoreInfo = ({Books}) => {
               </div>
             ))}
         </div>
+        <Pagination
+          Books = {booksArray}
+          totalBooks= {booksArray?.length}
+          currentPage = {currentPage}
+          BooksPerPage = {BooksPerPage}
+          paginate = {paginate}
+        />
     </section>
   )
 }
