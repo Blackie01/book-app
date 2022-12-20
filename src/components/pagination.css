@@ -1,0 +1,40 @@
+.page-ul{
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    /* gap: 20px; */
+    justify-content: center;
+
+}
+
+.page-ul li{
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    height: 55px;
+    padding-top: 16px;
+    width: 90px;
+    color: black;
+}
+
+.page-ul li:hover {
+    /* background:snow; */
+    /* background-color: #012928ff; */
+    border: 1px solid white;
+    color: snow;
+}
+
+.pagination-anchor{
+    text-decoration: none;
+    color: #fff;
+}
+
+.page-ul li:active {
+    background: #012928ff;
+}
+
+/* .active {
+    color: red;
+} */
