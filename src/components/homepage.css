@@ -17,10 +17,15 @@
   list-style-type: none;
 }
 
+.logoName {
+  text-decoration: none;
+  color: #fff;
+}
+
 .overall-homepage-body {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  background-color: #013D3Bff;
 }
 
 .wrap-text {
@@ -29,8 +34,8 @@
 
 .jumbo-text-section {
   color: #b1c9ad;
-  width: 50vw;
-  margin-left: 2vw;
+  width: 50%;
+  margin-left: 50px;
 }
 
 .main-text {
@@ -47,62 +52,72 @@ p {
   margin-bottom: 30px;
 }
 
-.search-bar {
-  width: 50vw;
+.search-bar-input {
+  width: 95%;
   height: 60px;
-  border-radius: 30px;
+  border-radius: 10px;
   border: none;
-  background-color: #022725;
-  opacity: 0.3;
   padding-left: 20px;
-  /* color: red; */
-  display: flex;
-  justify-content: end;
-  align-items: center;
+  background-color: #fff;
+  color: #000;
+  font-size: 15px;
+
 }
 
-.search-bar:hover {
-  scale: 1.005;
-  /* background-color: #022c2a; */
-  background-color: white;
-  /* background-color: #0b4946; */
+.search-bar-input:hover {
+  background-color: rgb(230, 240, 232);
+  color: #000;
+  font-size: 15px;
 }
 
 .searchIcon {
-  height: 35px;
-  width: 35px;
+  height: 25px;
+  width: 25px;
   margin-right: 20px;
+  margin-left: 10px;
 }
 
 input:focus {
   outline: none;
-  color: rgb(255, 255, 255);
-  font-size: medium;
+}
+
+.link-more {
+  text-decoration: none;
 }
 
 .searchSubmit{
   background-color: #022725;
-  border: none;
-  height: 60px;
-  border-radius: 30px;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
+  height: 50px;
+  width: 100px;
+  color: #b1c9ad;
+  margin-top: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.searchSubmit:hover {
+  background-color: #064641;
 }
 
 /* Images */
 
 .jumbo-images-section {
   display: flex;
-  flex-wrap: wrap;
   row-gap: 20px;
   column-gap: 20px;
-  width: 35vw;
-  margin: 13vh 0 0 0;
+  width: 35%;
+  width: 200px;
+  margin: 13vh 0 0 80px;
   height: 80vh;
 }
 
+
+
 .image1 {
-  margin-top: 40px;
+  margin: 40px 0 20px 0;
   height: 40vh;
   width: 16.1vw;
   border-radius: 10px;
@@ -117,7 +132,8 @@ input:focus {
 .image2 {
   height: 17vh;
   width: 11.5vw;
-  padding-right: 4.6vw;
+  margin-right: 4.6vw;
+  margin-bottom: 20px;
   border-radius: 10px;
 }
 
@@ -130,9 +146,9 @@ input:focus {
 .image3 {
   height: 17vh;
   width: 11.5vw;
-  padding-left: 4.6vw;
+  margin-left: 4.6vw;
   border-radius: 10px;
-  margin-top: -40px;
+  /* margin-top: -40px; */
 }
 
 .image3 img {
@@ -143,7 +159,7 @@ input:focus {
 
 .image4 {
   /* margin-top: -240px; */
-  margin-top: -36vh;
+  /* margin-top: -36vh; */
   height: 55vh;
   width: 16.1vw;
   border-radius: 10px;

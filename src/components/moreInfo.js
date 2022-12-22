@@ -3,6 +3,7 @@ import "./moreInfo.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useState } from 'react';
 import Pagination from './pagination';
+import altBook from '../assets/alt-book-image.jpeg';
 
 const MoreInfo = ({Books}) => {
     let booksArray = Books.items
@@ -22,10 +23,14 @@ const MoreInfo = ({Books}) => {
       setCurrentPage(pageNumber)
   };
 
+  
+
   return (
     <section>
         <nav className="navigation-bar">
-            <h2>BookSearch</h2>
+        <Link className="logoName" to='/homepage'>
+        <h2 >BookSearch</h2>
+        </Link>
             <section>
                 <ul className="nav-right">
                     <li>About</li>
@@ -36,7 +41,7 @@ const MoreInfo = ({Books}) => {
         </nav>
         <div className="books-container">
         {currentBooks.map((book, i) => (
-              <div className='books' key={i} >
+              <div className='books' key={i}>
                   <img src={book.volumeInfo.imageLinks.thumbnail} alt="book" key={i}/>
                   <h2>{book.volumeInfo.title}</h2>
                   <button className="read-more">
