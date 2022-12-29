@@ -35,6 +35,10 @@
     background: #012928ff;
 }
 
-/* .active {
-    color: red;
-} */
+/* MQ */
+
+@media only screen and (max-width:768px) {
+    .page-ul li {
+        width: 75px;
+    }
+}

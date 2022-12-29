@@ -69,6 +69,7 @@
     background-color: #013D3Bff;
     color: black;
     cursor: pointer;
+    border: 2px solid black;
   }
 
   .read-more:hover>a {
@@ -78,6 +79,13 @@
   .read-more a {
     color: black;
     text-decoration: none;
+  }
+
+  .image-h {
+    display: grid;
+    height: 200px;
+    align-content: space-around;
+    font-style: italic;
   }
 
 
