@@ -29,7 +29,7 @@ const MoreInfo = ({Books}) => {
   };
 ;
   return (
-    <section>
+    <section className='overall-books-container'>
       <nav className="navigation-bar">
         <Link className="logoName" to="/homepage">
           <h2>BookSearch</h2>
