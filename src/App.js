@@ -5,6 +5,7 @@ import MoreInfo from "./components/moreInfo"
 import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Navbar from './components/Navbar';
+import About from './components/about';
 
 function App() {
 
@@ -41,6 +42,7 @@ function App() {
         <Routes>
           <Route path="*" element={<Homepage showMain={showMain} />} />
           <Route path="/moreinfo" element={<MoreInfo Books={Books} />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </section>
     </Router>

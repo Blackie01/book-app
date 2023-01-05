@@ -1,0 +1,15 @@
+.about_container {
+  background-color: #013d3bff;
+  padding-top: 8rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  padding: 4rem;
+  text-align: justify;
+}
