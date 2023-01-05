@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 function Homepage({ showCase, showMain }) {
   return (
     <section className="overall-homepage-section">
-      <nav className="navigation-bar">
+      {/* <nav className="navigation-bar">
         <Link className="logoName" to="/homepage">
           <h2>BookSearch</h2>
         </Link>
@@ -17,9 +17,9 @@ function Homepage({ showCase, showMain }) {
             <li>Contributors</li>
             <li>API docs</li>
             <li>Sign up</li>
-          </ul>
+          </ul> 
         </section>
-      </nav>
+      </nav> */}
 
       <section className="overall-homepage-body">
         <section className="jumbo-text-section">
@@ -33,12 +33,12 @@ function Homepage({ showCase, showMain }) {
             </p>
           </div>
 
-            <input
-              className="search-bar-input"
-              placeholder="enter a title"
-              type="text"
-              onChange={showMain}
-            />
+          <input
+            className="search-bar-input"
+            placeholder="enter a title"
+            type="text"
+            onChange={showMain}
+          />
 
           <Link to="/moreinfo" className="link-more" onClick={showCase}>
             <div className="searchSubmit">Search</div>
