@@ -11,14 +11,14 @@
   height: 60px;
   justify-content: space-between;
   align-items: center;
+  padding: 0 4rem;
 }
 
-.logo {
-  padding-left: 4rem;
-}
-
-.nav_list > * {
+ul {
   display: flex;
   list-style-type: none;
-  /* justify-content: space-around; */
+}
+
+li {
+  padding-left: 2rem;
 }

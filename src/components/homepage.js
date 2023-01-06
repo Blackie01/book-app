@@ -6,11 +6,11 @@ import { useState, useEffect } from "react";
 
 function Homepage({ showCase, showMain }) {
 
-//   document.onkeydown=function(){
-//     if(window.event.keyCode=='13'){
-//         submitForm();
-//     }
-// }
+  //   document.onkeydown=function(){
+  //     if(window.event.keyCode=='13'){
+  //         submitForm();
+  //     }
+  // }
 
   return (
     <section className="overall-homepage-section">
