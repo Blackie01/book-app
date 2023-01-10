@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
 import Homepage from './components/homepage';
-import  MoreInfo from "./components/moreInfo"
+import  MoreInfo from "./components/moreInfo";
 import {useState, useEffect} from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import ReadMore from './components/readMore';
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
         <Routes>
           <Route path="*" element={<Homepage showMain = {showMain}/>} />
           <Route path="/moreinfo" element={<MoreInfo Books = {Books} />} />
+          <Route path='/readMore' element={<ReadMore/>}/>
         </Routes>
       </section>
     </Router>
