@@ -7,12 +7,16 @@ import altBook from "../assets/alt-book-image.jpeg";
 
 
 const MoreInfo = ({ Books }) => {
-  let booksArray = Books.items
+
+
+  localStorage.setItem("booksData", JSON.stringify(Books));
+
+
+    let booksArray = Books.items
   //console.log(booksArray);
-
-  //States for pagination
-
-
+  
+    //States for pagination
+    
   const [currentPage, setCurrentPage] = useState(1);
   const [BooksPerPage] = useState(10);
 
@@ -45,24 +49,27 @@ const MoreInfo = ({ Books }) => {
       <div className="books-container">
         {currentBooks.map((book, i) => (
 
-          <div className='books' key={i} >
-            {book.volumeInfo.imageLinks ? <img src={book.volumeInfo.imageLinks.thumbnail} alt="book" /> : <h4 className='image-h'>Image not available</h4>}
-            <h2>{book.volumeInfo.title}</h2>
-            <button className="read-more">
-              <Link to="/moreinfo">
-                Read More
-              </Link>
-            </button>
-          </div>
-        ))}
-      </div>
-      <Pagination
-        Books={booksArray}
-        totalBooks={booksArray?.length}
-        currentPage={currentPage}
-        BooksPerPage={BooksPerPage}
-        paginate={paginate}
-      />
+              <div className='books' key={i} >
+                  {book.volumeInfo.imageLinks ? <img src={book.volumeInfo.imageLinks.thumbnail} alt="book"/> : <h4 className='image-h'>Image not available</h4> }
+                  <h2>{book.volumeInfo.title}</h2>
+                  <Link to="/readMore">
+                  <button className="read-more">
+                      
+                        Read More
+                  </button>
+                  </Link>
+
+              </div>
+            ))}
+        </div>
+        <Pagination
+          Books = {booksArray}
+          totalBooks= {booksArray?.length}
+          currentPage = {currentPage}
+          BooksPerPage = {BooksPerPage}
+          paginate = {paginate}
+        />
+
 
     </section>
   );
