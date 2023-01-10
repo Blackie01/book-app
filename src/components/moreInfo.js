@@ -3,17 +3,21 @@ import "./moreInfo.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useState } from "react";
 import Pagination from "./pagination";
-import altBook from "../assets/alt-book-image.jpeg";
+import noImage from "../IMG/AxaTDpNTSDjnjGZzyuaKsb5OlqNw117zizIjATMe.jpeg";
 
 
 const MoreInfo = ({ Books }) => {
 
 
-  localStorage.setItem("booksData", JSON.stringify(Books));
+  
 
 
     let booksArray = Books.items
+    localStorage.setItem("booksData", JSON.stringify(booksArray));
   //console.log(booksArray);
+  //localStorage.setItem('repoData', JSON.stringify(repo))
+    
+    console.log(JSON.stringify(booksArray));
   
     //States for pagination
     
@@ -26,7 +30,7 @@ const MoreInfo = ({ Books }) => {
   const currentBooks = booksArray?.slice(indexOfFirstBooks, indexOfLastBooks);
 
 
-  //console.log(currentBooks)
+  console.log(currentBooks)
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber)
 
@@ -34,7 +38,7 @@ const MoreInfo = ({ Books }) => {
   ;
   return (
     <section className='overall-books-container'>
-      {/* <nav className="navigation-bar">
+      <nav className="navigation-bar">
         <Link className="logoName" to="/homepage">
           <h2>BookSearch</h2>
         </Link>
@@ -45,20 +49,20 @@ const MoreInfo = ({ Books }) => {
             <li>API docs</li>
           </ul>
         </section>
-      </nav> */}
+      </nav>
       <div className="books-container">
         {currentBooks.map((book, i) => (
 
-              <div className='books' key={i} >
-                  {book.volumeInfo.imageLinks ? <img src={book.volumeInfo.imageLinks.thumbnail} alt="book"/> : <h4 className='image-h'>Image not available</h4> }
+              <div className='books' key={book.id} >
+                  {book.volumeInfo.imageLinks ? <img src={book.volumeInfo.imageLinks.thumbnail} alt="book"/> : <img src= { noImage } alt="No Image" /> }
                   <h2>{book.volumeInfo.title}</h2>
-                  <Link to="/readMore">
+                  <Link to={`/readMore/${book.id}`}>
                   <button className="read-more">
                       
                         Read More
                   </button>
                   </Link>
-
+                  {/* <Link to={`/apiWorks/${repository.id}`}> */}
               </div>
             ))}
         </div>

@@ -14,7 +14,7 @@ function Homepage({ showCase, showMain }) {
 
   return (
     <section className="overall-homepage-section">
-      {/* <nav className="navigation-bar">
+      <nav className="navigation-bar">
         <Link className="logoName" to="/homepage">
           <h2>BookSearch</h2>
         </Link>
@@ -26,7 +26,7 @@ function Homepage({ showCase, showMain }) {
             <li>Sign up</li>
           </ul> 
         </section>
-      </nav> */}
+      </nav>
 
       <section className="overall-homepage-body">
         <section className="jumbo-text-section">

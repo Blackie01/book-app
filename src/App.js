@@ -5,6 +5,7 @@ import  MoreInfo from "./components/moreInfo";
 import {useState, useEffect} from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import ReadMore from './components/readMore';
+import Navbar from "./components/Navbar"
 
 function App() {
 
@@ -37,11 +38,12 @@ function App() {
   return (
     <Router>
       <section className="main-container">
-        <Navbar />
+        {/* <Navbar /> */}
         <Routes>
           <Route path="*" element={<Homepage showMain = {showMain}/>} />
           <Route path="/moreinfo" element={<MoreInfo Books = {Books} />} />
-          <Route path='/readMore' element={<ReadMore/>}/>
+          <Route path='/readmore/:id' element={<ReadMore/>}/>
+          {/* <Route path="/apicall/:id" element={<MoreInfo />} /> */}
         </Routes>
       </section>
     </Router>

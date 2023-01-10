@@ -1,4 +1,15 @@
 .overall-read-more-container {
-  background-color: #013D3Bff;
-  height: 100vh;
+    background-color: #013D3Bff;
+    height: 100vh;
+}
+
+.read-more-container {
+    display: grid;
+    grid-template-columns: 350px 350px;
+    /* width: 80%; */
+}
+
+.read-more-container img {
+  width: 250px;
+  width: 75%;
 }
