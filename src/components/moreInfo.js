@@ -8,6 +8,7 @@ import altBook from "../assets/alt-book-image.jpeg";
 
 const MoreInfo = ({ Books }) => {
 
+
   localStorage.setItem("booksData", JSON.stringify(Books));
 
 
@@ -15,6 +16,7 @@ const MoreInfo = ({ Books }) => {
   //console.log(booksArray);
   
     //States for pagination
+    
   const [currentPage, setCurrentPage] = useState(1);
   const [BooksPerPage] = useState(10);
 
@@ -24,15 +26,15 @@ const MoreInfo = ({ Books }) => {
   const currentBooks = booksArray?.slice(indexOfFirstBooks, indexOfLastBooks);
 
 
-    //console.log(currentBooks)
-    const paginate = (pageNumber) => {
-      setCurrentPage(pageNumber)
+  //console.log(currentBooks)
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber)
 
   };
-;
+  ;
   return (
     <section className='overall-books-container'>
-      <nav className="navigation-bar">
+      {/* <nav className="navigation-bar">
         <Link className="logoName" to="/homepage">
           <h2>BookSearch</h2>
         </Link>
@@ -43,7 +45,7 @@ const MoreInfo = ({ Books }) => {
             <li>API docs</li>
           </ul>
         </section>
-      </nav>
+      </nav> */}
       <div className="books-container">
         {currentBooks.map((book, i) => (
 
@@ -67,6 +69,7 @@ const MoreInfo = ({ Books }) => {
           BooksPerPage = {BooksPerPage}
           paginate = {paginate}
         />
+
 
     </section>
   );

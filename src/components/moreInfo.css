@@ -1,3 +1,4 @@
+
 .navigation-bar {
     background-color: #012928ff;
     display: flex;
@@ -10,116 +11,31 @@
     position: sticky;
     top: 0;
     padding: 0 36px 0 36px;
+
   }
+}
 
-  .overall-books-container {
-  background-color: #013D3Bff;
-  }
-
-  .nav-right {
-    display: flex;
-    gap: 30px;
-    list-style-type: none;
-    font-size: 12px;
-    gap: 10px;
-  }
-
-
+@media only screen and (max-width: 768px) {
   .books-container {
-    padding: 30px 0 30px 0;
-    display: grid;
-    grid-gap: 13px;
-    grid-template-columns: repeat(4,1fr);
-    justify-items: center;
-  background-color: #013D3Bff;
-
+    grid-template-columns: repeat(3, 1fr);
   }
+}
 
-
-  .books h2 {
-    font-size: 12px;
-    text-align: center;
-    width: fit-content;
-    justify-self: center;
-    color: snow;
+@media only screen and (max-width: 665px) {
+  .navigation-bar {
+    padding: 0 15px 0 15px;
   }
-
+  .books-container {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 40px 0 40px 0;
+  }
 
   .books {
-    display: grid;
-    justify-content: center!important;
-    background-color: #012928ff;
-    border-radius: 5px;
-    width: 10rem;
-    height: 15rem;
-    width: 190px;
-    height: 18rem;
-    padding-top: 14px;
+    width: 163px;
+    height: 17rem;
   }
 
-
- .books img {
-    justify-self: center;
+  .books img {
+    width: 115px;
   }
-
-  .read-more {
-    width: 129px;
-    height: 30px;
-    justify-self: center;
-    background-color: #013D3Bff;
-    color: black;
-    cursor: pointer;
-    border: 2px solid black;
-  }
-
-  .read-more:hover>a {
-    color: snow;
-  }
-
-  .read-more a {
-    color: black;
-    text-decoration: none;
-  }
-
-  .image-h {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 195px;
-    font-style: italic;
-    color: rgb(71, 182, 178);
-  }
-
-
-  /* MQ */
-
-  @media only screen and (max-width:1000px) {
-    .books-container {
-      grid-template-columns: repeat(3,1fr);
-    }
-  }
-
-  @media only screen and (max-width:768px) {
-    .books-container {
-      grid-template-columns: repeat(3,1fr);
-    }
-  }
-  
-  @media only screen and (max-width:665px) {
-    .navigation-bar {
-      padding: 0 15px 0 15px;
-    }
-    .books-container {
-      grid-template-columns: repeat(2,1fr);
-      padding: 40px 0 40px 0;
-    }
-
-    .books {
-      width: 163px;
-      height: 17rem;
-    }
-
-    .books img {
-      width: 115px;
-    }
-  }
+}
