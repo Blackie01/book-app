@@ -1,36 +1,35 @@
 import React from "react";
 import "./moreInfo.css";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link, useParams } from "react-router-dom";
 import { useState } from "react";
 import Pagination from "./pagination";
 import noImage from "../IMG/AxaTDpNTSDjnjGZzyuaKsb5OlqNw117zizIjATMe.jpeg";
 
 
 const MoreInfo = ({ Books }) => {
-
-
   
-
+  const storedBooks =  JSON.parse(sessionStorage.getItem("books"))  //console.log(storedBooks);
 
     let booksArray = Books.items
-    localStorage.setItem("booksData", JSON.stringify(booksArray));
-  //console.log(booksArray);
-  //localStorage.setItem('repoData', JSON.stringify(repo))
-    
-    console.log(JSON.stringify(booksArray));
+    localStorage.setItem("booksData", JSON.stringify(storedBooks));
+    //console.log(booksArray);
+
   
     //States for pagination
     
   const [currentPage, setCurrentPage] = useState(1);
   const [BooksPerPage] = useState(10);
 
+  
+  //  const userInputStore = JSON.parse(localStorage.getItem("userInput"))
+
   //Pagination Variables
   const indexOfLastBooks = currentPage * BooksPerPage;
   const indexOfFirstBooks = indexOfLastBooks - BooksPerPage;
-  const currentBooks = booksArray?.slice(indexOfFirstBooks, indexOfLastBooks);
+  const currentBooks = storedBooks.slice(indexOfFirstBooks, indexOfLastBooks);
 
 
-  console.log(currentBooks)
+  //console.log(currentBooks)
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber)
 
@@ -68,7 +67,7 @@ const MoreInfo = ({ Books }) => {
         </div>
         <Pagination
           Books = {booksArray}
-          totalBooks= {booksArray?.length}
+          totalBooks= {storedBooks?.length}
           currentPage = {currentPage}
           BooksPerPage = {BooksPerPage}
           paginate = {paginate}

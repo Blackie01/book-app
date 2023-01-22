@@ -20,16 +20,27 @@ function App() {
   //Function to get html content of the input box
   const showMain = (e) => {
     setUserInput(e.target.value)
-    //console.log(UserInput);
+    console.log(UserInput);
+    console.log(e.target.value);
   }
 
 
+
+  
   //API with useEffect, and UserInput is our dependency array because our rendering depends on it
   useEffect(() => () => {
     fetch(`https://www.googleapis.com/books/v1/volumes?q=${UserInput}&maxResults=40&key=AIzaSyBuwxHeRrb6JhyDAHqCq8lkWWazlbquHxM`)
       .then((response) => response.json())
       .then((data) => {
         setBooks(data)
+        
+        //Session Storage to store Books array
+        if(Books.items.length >= 0) {
+          //console.log(Books.items);
+          sessionStorage.setItem("books", JSON.stringify(Books.items))
+          //console.log(Books.items.length);
+        }
+          
       })
   }, [UserInput]);
 

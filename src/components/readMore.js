@@ -2,6 +2,7 @@ import React from "react";
 import "./readMore.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import Payment from "./payment";
 
 
 const ReadMore = () => {
@@ -9,16 +10,10 @@ const ReadMore = () => {
   let { id } = useParams ()
 
   const DataLocalStore = JSON.parse(localStorage.getItem("booksData"))
-  const shopLocalData = DataLocalStore?.filter((idf) => idf.id == id)
-  console.log(shopLocalData)
-
-  // let { id } = useParams();
-
-  // const ReadMoreData = JSON.parse(localStorage.getItem("repoData"));
-  // const finalData = ReadMoreData?.filter((idf) => idf.id == id);
-  // // console.log(finalData);
-  // //console.log(finalData);
-  // console.log(ReadMoreData);
+  const shopLocalData = DataLocalStore?.filter((idf) => idf.id === id)
+  //console.log(shopLocalData)
+  //console.log(finalData);
+  //console.log(DataLocalStore);
 
   return (
     <section className="overall-read-more-container">
@@ -48,8 +43,11 @@ const ReadMore = () => {
             <h1>{ shopLocalData[0].searchInfo.textSnippet }</h1>
             <h1>{ shopLocalData[0].volumeInfo.publisher }</h1>
             <h1>{ shopLocalData[0].volumeInfo.contentVersion }</h1>
+            <h1>  Price: #<span>5000</span></h1>
           </div>
       </section>
+      <Payment />
+      <div className=""> <em>NOTE : </em>This is a test payment structure which doesn't accept original card details, so you are not expected to input your card details. Thank you </div>
     </section>
   );
 }
