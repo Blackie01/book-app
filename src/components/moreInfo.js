@@ -6,22 +6,22 @@ import Pagination from "./pagination";
 import noImage from "../IMG/AxaTDpNTSDjnjGZzyuaKsb5OlqNw117zizIjATMe.jpeg";
 
 
-const MoreInfo = ({ Books }) => {
-  
-  const storedBooks =  JSON.parse(sessionStorage.getItem("books"))  //console.log(storedBooks);
-
+const MoreInfo = ({ Books, FirstInput }) => {
     let booksArray = Books.items
-    localStorage.setItem("booksData", JSON.stringify(storedBooks));
-    //console.log(booksArray);
-
   
     //States for pagination
     
   const [currentPage, setCurrentPage] = useState(1);
   const [BooksPerPage] = useState(10);
 
-  
-  //  const userInputStore = JSON.parse(localStorage.getItem("userInput"))
+  if(booksArray) {
+    sessionStorage.setItem("booksData", JSON.stringify(booksArray));
+  //console.log(storedBooks);
+  //console.log(booksArray);
+  }
+
+  const storedBooks =  JSON.parse(sessionStorage.getItem("booksData"))
+  //console.log(storedBooks);
 
   //Pagination Variables
   const indexOfLastBooks = currentPage * BooksPerPage;

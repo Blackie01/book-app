@@ -9,10 +9,9 @@ const ReadMore = () => {
 
   let { id } = useParams ()
 
-  const DataLocalStore = JSON.parse(localStorage.getItem("booksData"))
+  const DataLocalStore = JSON.parse(sessionStorage.getItem("booksData"))
   const shopLocalData = DataLocalStore?.filter((idf) => idf.id === id)
   //console.log(shopLocalData)
-  //console.log(finalData);
   //console.log(DataLocalStore);
 
   return (
@@ -40,7 +39,7 @@ const ReadMore = () => {
             <h1>{ shopLocalData[0].volumeInfo.categories }</h1>
             <h1>{ shopLocalData[0].volumeInfo.pageCount }</h1>
             <h1>{ shopLocalData[0].volumeInfo.publishedDate }</h1>
-            <h1>{ shopLocalData[0].searchInfo.textSnippet }</h1>
+            {shopLocalData[0].searchInfo ? <h1>{ shopLocalData[0].searchInfo.textSnippet }</h1> : <span></span> }
             <h1>{ shopLocalData[0].volumeInfo.publisher }</h1>
             <h1>{ shopLocalData[0].volumeInfo.contentVersion }</h1>
             <h1>  Price: #<span>5000</span></h1>

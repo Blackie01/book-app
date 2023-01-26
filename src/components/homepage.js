@@ -47,7 +47,7 @@ function Homepage({ showCase, showMain }) {
             onChange={showMain}
           />
 
-          <Link to="/moreinfo" className="link-more" onClick={showCase}>
+          <Link to="/moreinfo" className="link-more" onClick={showCase} >
             <div className="searchSubmit">Search</div>
           </Link>
         </section>

@@ -11,6 +11,7 @@ function App() {
 
   //For what the user type in the input box
   const [UserInput, setUserInput] = useState('');
+  const [FirstInput, setFirstInput] = useState('')
 
   //For the books returned by the API call
   const [Books, setBooks] = useState([])
@@ -19,31 +20,26 @@ function App() {
 
   //Function to get html content of the input box
   const showMain = (e) => {
-    setUserInput(e.target.value)
+    setFirstInput(e.target.value)
+  }
+
+  const showCase = () => {
+    setUserInput(FirstInput)
     console.log(UserInput);
-    console.log(e.target.value);
   }
 
 
 
   
   //API with useEffect, and UserInput is our dependency array because our rendering depends on it
-  useEffect(() => () => {
-    fetch(`https://www.googleapis.com/books/v1/volumes?q=${UserInput}&maxResults=40&key=AIzaSyBuwxHeRrb6JhyDAHqCq8lkWWazlbquHxM`)
+  useEffect( () => {
+      fetch(`https://www.googleapis.com/books/v1/volumes?q=${FirstInput}&maxResults=40&key=AIzaSyBuwxHeRrb6JhyDAHqCq8lkWWazlbquHxM`)
       .then((response) => response.json())
       .then((data) => {
-        setBooks(data)
-        
-        //Session Storage to store Books array
-        if(Books.items.length >= 0) {
-          //console.log(Books.items);
-          sessionStorage.setItem("books", JSON.stringify(Books.items))
-          //console.log(Books.items.length);
-        }
-          
+        setBooks(data)    
       })
-  }, [UserInput]);
-
+      
+  }, [FirstInput]);
 
 
   return (
@@ -51,8 +47,8 @@ function App() {
       <section className="main-container">
         {/* <Navbar /> */}
         <Routes>
-          <Route path="*" element={<Homepage showMain = {showMain}/>} />
-          <Route path="/moreinfo" element={<MoreInfo Books = {Books} />} />
+          <Route path="*" element={<Homepage showMain = {showMain} showCase = {showCase}/>} />
+          <Route path="/moreinfo" element={<MoreInfo Books = {Books} FirstInput = {FirstInput} />} />
           <Route path='/readmore/:id' element={<ReadMore/>}/>
           {/* <Route path="/apicall/:id" element={<MoreInfo />} /> */}
         </Routes>
