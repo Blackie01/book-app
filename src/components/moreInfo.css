@@ -75,6 +75,10 @@ background-color: #013D3Bff;
   border: 2px solid black;
 }
 
+.read-more:hover {
+  color: whitesmoke;
+}
+
 .read-more:hover>a {
   color: snow;
 }

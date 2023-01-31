@@ -1,15 +1,104 @@
 .overall-read-more-container {
     background-color: #013D3Bff;
     height: 100vh;
+    display: grid
 }
 
 .read-more-container {
     display: grid;
     grid-template-columns: 350px 350px;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 400px auto;
     /* width: 80%; */
 }
 
 .read-more-container img {
   width: 250px;
-  width: 75%;
+  width: 81%;
+  height: 73%;
+}
+
+.read-more-container div {
+  line-height: 1.8rem;
+  background-color: #012928ff;
+  width: 290px;
+  height: 380px;
+  font-size: 15px;
+  padding: 7px 0 0 20px;
+  border-radius: 5px;
+}
+
+.read-more-container div h1 {
+  padding-bottom: 3px;
+  border-bottom: 1px dotted white;
+  font-weight: 100;
+  color: white;
+  font-size: 12px;
+}
+
+.read-more-container div button {
+  width: 15rem;
+  height: 2.7rem;
+  cursor: pointer;
+  margin-top: 13px;
+  background-color: #013D3Bff;
+  color: black;
+}
+
+.read-more-container div button a {
+  text-decoration: none;
+  color: black;
+}
+
+
+.read-more-container div button:hover > a {
+  /* background-color: whitesmoke; */
+  /* color: black; */
+  color: white;
+}
+
+
+@media only screen and (max-width:768px) {
+
+  .overall-read-more-container {
+    height: unset;
+  }
+  
+  .read-more-container {
+    display: flex;
+    /* display: grid; */
+    flex-direction: column;
+    margin-top: 35px;
+  }
+  
+  .read-more-container img {
+    width: 60%;
+    height: 50%;
+  }
+
+  .read-more-container div {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    background-color: #012928ff;
+    height: 497px;
+    width: 275px;
+    padding: 10px 0 0 26px;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+
+  .read-more-container div h1 {
+    border-bottom: 1px dotted black;
+    padding-bottom: 6px;
+    font-weight: lighter;
+    color: whitesmoke;
+  }
+
+  .read-more-container div h1 span {
+    font-weight: 700;
+  }
+  .read-more-container div button {
+    margin-top: 14px;
+  }
 }

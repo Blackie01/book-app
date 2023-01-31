@@ -16,7 +16,7 @@ const ReadMore = () => {
 
   return (
     <section className="overall-read-more-container">
-      {/* <nav className="navigation-bar">
+      <nav className="navigation-bar">
         <Link className="logoName" to="/homepage">
           <h2>BookSearch</h2>
         </Link>
@@ -27,26 +27,28 @@ const ReadMore = () => {
             <li>API docs</li>
           </ul>
         </section>
-      </nav> */}
+      </nav>
 
       <section className="read-more-container">
           {shopLocalData[0].volumeInfo.imageLinks ? <img src={shopLocalData[0].volumeInfo.imageLinks.thumbnail} alt="book"/> : <h4 className='image-h'>Image not available</h4> }
           <div>
-            <h1>{ shopLocalData[0].volumeInfo.title }</h1>
-            <h1>{ shopLocalData[0].volumeInfo.language }</h1>
-            <h1>{ shopLocalData[0].volumeInfo.authors }</h1>
-            <h1>{ shopLocalData[0].volumeInfo.averageRating }</h1>
-            <h1>{ shopLocalData[0].volumeInfo.categories }</h1>
-            <h1>{ shopLocalData[0].volumeInfo.pageCount }</h1>
-            <h1>{ shopLocalData[0].volumeInfo.publishedDate }</h1>
-            {shopLocalData[0].searchInfo ? <h1>{ shopLocalData[0].searchInfo.textSnippet }</h1> : <span></span> }
-            <h1>{ shopLocalData[0].volumeInfo.publisher }</h1>
-            <h1>{ shopLocalData[0].volumeInfo.contentVersion }</h1>
-            <h1>  Price: #<span>5000</span></h1>
+            <h1> <strong>Title: </strong> { shopLocalData[0].volumeInfo.title }</h1>
+            <h1> <strong> Language: </strong> { shopLocalData[0].volumeInfo.language }</h1>
+            <h1> <strong> Author(s): </strong> { shopLocalData[0].volumeInfo.authors }</h1>
+            <h1> <strong> Rating: </strong> { shopLocalData[0].volumeInfo.averageRating }</h1>
+            <h1> <strong> Category: </strong> { shopLocalData[0].volumeInfo.categories }</h1>
+            <h1> <strong> Page Count: </strong> { shopLocalData[0].volumeInfo.pageCount }</h1>
+            <h1> <strong> Release Date : </strong> { shopLocalData[0].volumeInfo.publishedDate }</h1>
+            {/* {shopLocalData[0].searchInfo ? <h1> <strong>: </strong> { shopLocalData[0].searchInfo.textSnippet }</h1> : <strong></strong> } */}
+            <h1> <strong> Publisher: </strong> { shopLocalData[0].volumeInfo.publisher }</h1>
+            <h1> <strong> Version : </strong> { shopLocalData[0].volumeInfo.contentVersion }</h1>
+            <h1>  Price: #<strong>5000</strong></h1>
+            <button><a href="https://paystack.com/pay/my-book-app">PURCHASE</a></button>
           </div>
+          
       </section>
-      <Payment />
-      <div className=""> <em>NOTE : </em>This is a test payment structure which doesn't accept original card details, so you are not expected to input your card details. Thank you </div>
+      {/* <Payment />
+      <div className=""> <em>NOTE : </em>This is a test payment structure which doesn't accept original card details, so you are not expected to input your card details. Thank you </div> */}
     </section>
   );
 }
