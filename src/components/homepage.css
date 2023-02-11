@@ -1,3 +1,5 @@
+.overall-homepage-section
+
 .navigation-bar {
   background-color: #012928ff;
   display: flex;
@@ -184,14 +186,19 @@ input:focus {
 
 @media only screen and (max-width: 768px) {
   .overall-homepage-section {
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw;
+    height: 100vh; */
+    width: max-content;
+    overflow-y: hidden;
+    background-color: #013D3Bff;
+    padding-bottom: 300px;
   }
 
   .navigation-bar {
     padding: 0 10px 0 10px;
     position: -webkit-sticky;
     top: 0;
+    bottom: 0;
   }
 
   .navigation-bar h2 {
@@ -203,11 +210,12 @@ input:focus {
   }
 
   .overall-homepage-body {
-    display: block;
+    flex-direction: column;
+
   }
 
   .jumbo-text-section {
-    width: 100vw;
+    width: max-content;
     align-items: center;
     text-align: center;
     margin-top: 10vh;
@@ -218,6 +226,7 @@ input:focus {
     font-size: 50px;
     margin-bottom: 30px;
     margin-top: 0px;
+  
   }
 
   .brbr {
@@ -253,7 +262,7 @@ input:focus {
   }
 
   .image4 {
-    margin-top: inherit;
+    margin-top: 50px;
     height: inherit;
     width: 200px;
   }
