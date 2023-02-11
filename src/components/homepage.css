@@ -247,6 +247,7 @@ input:focus {
     width: 100vw;
     margin-top: 20px;
     height: 34vh;
+    border: 2px solid red;
   }
 
   .image1 {
