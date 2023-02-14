@@ -49,6 +49,8 @@ const MoreInfo = ({ Books, FirstInput }) => {
           </ul>
         </section>
       </nav>
+     
+
       <div className="books-container">
         {currentBooks.map((book, i) => (
 
