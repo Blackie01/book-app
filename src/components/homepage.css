@@ -1,4 +1,4 @@
-.overall-homepage-section
+/* .overall-homepage-section */
 
 .navigation-bar {
   background-color: #012928ff;
@@ -186,7 +186,7 @@ input:focus {
 
 @media only screen and (max-width: 768px) {
   .overall-homepage-section {
-    width: max-content;
+    width: 100%;
     overflow-y: hidden;
     background-color: #013D3Bff;
     padding-bottom: 300px;
@@ -197,17 +197,15 @@ input:focus {
   }
 
   .navigation-bar {
-    padding: 0 10px 0 10px;
-    position: -webkit-sticky;
-    top: 0;
-    bottom: 0;
+    border: 1px solid red;
+    padding-left: ;
   }
 
   .navigation-bar h2 {
     font-size: 15px;
   }
 
-  .nav-right {
+  .hamburger-text {
     display: none;
   }
 

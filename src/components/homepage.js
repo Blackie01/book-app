@@ -18,7 +18,7 @@ function Homepage({ showCase, showMain }) {
         <Link className="logoName" to="/homepage">
           <h2>BookSearch</h2>
         </Link>
-        <section>
+        <section className="hamburger-text">
           <ul className="nav-right">
             <li>About</li>
             <li>Contributors</li>
