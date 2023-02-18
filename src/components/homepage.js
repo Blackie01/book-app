@@ -18,7 +18,7 @@ function Homepage({ showCase, showMain }) {
         <Link className="logoName" to="/homepage">
           <h2>BookSearch</h2>
         </Link>
-        <section>
+        <section className="hamburger-text">
           <ul className="nav-right">
             <li>About</li>
             <li>Contributors</li>
@@ -32,7 +32,7 @@ function Homepage({ showCase, showMain }) {
         <section className="jumbo-text-section">
           <div className="wrap-text">
             <h1 className="main-text">
-              Search <br className="brbr" /> the internet <br /> for books
+              <span className="search-span">Search</span> <br className="brbr" /> the internet <br /> for books
             </h1>
             <p>
               Get 1,000,000 books without breaking a sweat. <br /> Type! Our

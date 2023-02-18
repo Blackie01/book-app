@@ -1,5 +1,3 @@
-.overall-homepage-section
-
 .navigation-bar {
   background-color: #012928ff;
   display: flex;
@@ -21,13 +19,13 @@
 
 .logoName {
   text-decoration: none;
-  color: #fff;
+  color: #e7ab95;
 }
 
 .overall-homepage-body {
   display: flex;
   align-items: center;
-  background-color: #013D3Bff;
+  background-color: #013d3bff;
 }
 
 .wrap-text {
@@ -44,6 +42,7 @@
   font-size: 75px;
   margin-bottom: 0px;
   margin-top: 0px;
+  text-shadow: -1px 0 #eb6636, 0 1px #eb6636, 1px 0 #eb6636, 0 -1px #eb6636;
 }
 
 .brbr {
@@ -63,7 +62,6 @@ p {
   background-color: #fff;
   color: #000;
   font-size: 15px;
-
 }
 
 .search-bar-input:hover {
@@ -87,7 +85,7 @@ input:focus {
   text-decoration: none;
 }
 
-.searchSubmit{
+.searchSubmit {
   background-color: #022725;
   height: 50px;
   width: 100px;
@@ -101,7 +99,7 @@ input:focus {
 }
 
 .searchSubmit:hover {
-  background-color: #064641;
+  background-color: #e9754b;
 }
 
 /* Images */
@@ -115,8 +113,6 @@ input:focus {
   margin: 13vh 0 0 80px;
   height: 80vh;
 }
-
-
 
 .image1 {
   margin: 40px 0 20px 0;
@@ -150,7 +146,6 @@ input:focus {
   width: 11.5vw;
   margin-left: 4.6vw;
   border-radius: 10px;
-  /* margin-top: -40px; */
 }
 
 .image3 img {
@@ -160,8 +155,6 @@ input:focus {
 }
 
 .image4 {
-  /* margin-top: -240px; */
-  /* margin-top: -36vh; */
   height: 55vh;
   width: 16.1vw;
   border-radius: 10px;
@@ -186,79 +179,80 @@ input:focus {
 
 @media only screen and (max-width: 768px) {
   .overall-homepage-section {
-    width: max-content;
-    overflow-y: hidden;
-    background-color: #013D3Bff;
+    width: 100%;
+    background-color: #013d3bff;
     padding-bottom: 300px;
-  }
-
-  .overall-homepage-body {
-    text-align: center;
+    height: 100vh;
+    overflow-y: hidden;
   }
 
   .navigation-bar {
-    padding: 0 10px 0 10px;
-    position: -webkit-sticky;
-    top: 0;
-    bottom: 0;
+    padding-left: 20px;
   }
 
   .navigation-bar h2 {
     font-size: 15px;
   }
 
-  .nav-right {
+  .hamburger-text {
     display: none;
   }
 
   .overall-homepage-body {
-    flex-direction: column;
-
+    flex-direction: column-reverse;
+    text-align: center;
   }
 
   .jumbo-text-section {
-    width: max-content;
+    width: 92%;
+    padding-top: 35px;
     align-items: center;
     text-align: center;
-    margin-top: 10vh;
+    margin-top: -120px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
     margin-left: 0;
+    background-color: #012928ff;
+    padding-bottom: 70px;
   }
 
   .main-text {
-    font-size: 50px;
+    font-size: 30px;
     margin-bottom: 30px;
     margin-top: 0px;
-  
   }
 
-  .brbr {
-    display: block;
+  .search-span {
+    color: #eb6636;
   }
 
   p {
     margin-bottom: 40px;
   }
 
-  .search-bar {
-    width: 80vw;
+  .search-bar-input {
+    width: 90%;
+    height: 50px;
   }
 
- .searchSubmit {
-  /* border: 1px solid red; */
-  margin: auto;
-  margin-top: 30px;
- }
+  .searchSubmit {
+    margin: auto;
+    width: 90%;
+    margin-top: 10px;
+    background-color: #eb6636;
+    color: #012928ff;
+    font-weight: bolder;
+  }
 
   .jumbo-images-section {
-    /* display: flex; */
     justify-content: center;
-    /* width: 100vw; */
-    /* width: 100%; */
     margin: auto;
-
-    margin-top: 20px;
     height: 400px;
-    /* border: 1px solid red; */
+    width: 60%;
+  }
+
+  .jumbo-left-images {
+    display: none;
   }
 
   .image1 {
@@ -276,7 +270,6 @@ input:focus {
   .image4 {
     margin-top: 50px;
     height: inherit;
-    width: 200px;
-    
+    width: 100%;
   }
 }

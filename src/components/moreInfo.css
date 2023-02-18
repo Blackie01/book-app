@@ -10,7 +10,7 @@
   position: sticky;
   top: 0;
 
-  padding: 0 36px 0 36px;
+  /* padding: 0 36px 0 36px; */
 }
 
 .overall-books-container {
@@ -111,12 +111,10 @@ background-color: #013D3Bff;
   .books-container {
     grid-template-columns: repeat(3,1fr);
   }
-}
 
-@media only screen and (max-width:665px) {
-  .navigation-bar {
+  /* .navigation-bar {
     padding: 0 15px 0 15px;
-  }
+  } */
   .books-container {
     grid-template-columns: repeat(2,1fr);
     padding: 40px 0 40px 0;
@@ -131,6 +129,10 @@ background-color: #013D3Bff;
   .books img {
     width: 115px;
   }
+}
+
+@media only screen and (max-width:665px) {
+
 }
 
 
