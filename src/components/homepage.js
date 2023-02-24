@@ -26,6 +26,12 @@ function Homepage({ showCase, showMain }) {
             <li>Sign up</li>
           </ul> 
         </section>
+
+        <section className="responsive-menu">
+          <div className="resp-menu"></div>
+          <div className="resp-menu"></div>
+          <div className="resp-menu"></div>
+        </section>
       </nav>
 
       <section className="overall-homepage-body">
