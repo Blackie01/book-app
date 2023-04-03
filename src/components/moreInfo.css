@@ -32,7 +32,6 @@ background-color: #013D3Bff;
   grid-template-columns: repeat(4,1fr);
   justify-items: center;
 background-color: #013D3Bff;
-
 }
 
 
@@ -47,18 +46,21 @@ background-color: #013D3Bff;
 
 .books {
   display: grid;
-  justify-content: center!important;
   background-color: #012928ff;
   border-radius: 5px;
   margin-bottom: 20px;
-
+ text-align: center;
   width: 10rem;
-  height: 15rem;
+  /* height: 15rem; */
+  height: 350px;
   width: 190px;
-  height: 18rem;
-  padding-top: 14px;
+  /* height: 18rem; */
+  padding: 15px;
 }
 
+.book-title {
+  margin-top: 15px;
+}
 
 .books img {
   justify-self: center;
@@ -71,9 +73,10 @@ background-color: #013D3Bff;
   height: 30px;
   justify-self: center;
   background-color: #013D3Bff;
-  color: black;
+  color: #eb6636;
   cursor: pointer;
   border: 2px solid black;
+ 
 }
 
 .read-more:hover {
@@ -112,22 +115,23 @@ background-color: #013D3Bff;
     grid-template-columns: repeat(3,1fr);
   }
 
-  /* .navigation-bar {
-    padding: 0 15px 0 15px;
-  } */
   .books-container {
     grid-template-columns: repeat(2,1fr);
-    padding: 40px 0 40px 0;
+    /* padding: 40px 0 40px 0; */
 
   }
 
   .books {
     width: 163px;
-    height: 17rem;
+    height: 350px;
   }
 
   .books img {
     width: 115px;
+  }
+
+  .read-more {
+    color: #eb6636;
   }
 }
 

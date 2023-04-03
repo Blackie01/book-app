@@ -2,6 +2,8 @@ import React from "react";
 import "./readMore.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import { useState } from "react";
+
 import Payment from "./payment";
 
 
@@ -14,24 +16,50 @@ const ReadMore = () => {
   //console.log(shopLocalData)
   //console.log(DataLocalStore);
 
+  // making nav responsive with useState
+const [isOpen, setIsOpen] = useState(false)
+
   return (
     <section className="overall-read-more-container">
-      <nav className="navigation-bar">
+
+<nav className="navigation-bar">
         <Link className="logoName" to="/homepage">
           <h2>BookSearch</h2>
         </Link>
-        <section>
+        <section className="hamburger-text">
           <ul className="nav-right">
             <li>About</li>
             <li>Contributors</li>
             <li>API docs</li>
+            <li>Sign up</li>
+          </ul> 
+        </section>
+
+        <section className="responsive-menu"
+        onClick = {() => setIsOpen(!isOpen)}
+        >
+          <div className="resp-menu"></div>
+          <div className="resp-menu"></div>
+          <div className="resp-menu"></div>
+
+        {isOpen && (
+          <>
+           <div className="overlay" onClick={() => setIsOpen(false)}></div>
+          <ul className="responsive-nav">
+            <li>About</li>
+            <li>Contributors</li>
+            <li>API docs</li>
+            <li>Sign up</li>
           </ul>
+          </>
+
+        )}
         </section>
       </nav>
 
       <section className="read-more-container">
           {shopLocalData[0].volumeInfo.imageLinks ? <img src={shopLocalData[0].volumeInfo.imageLinks.thumbnail} alt="book"/> : <h4 className='image-h'>Image not available</h4> }
-          <div>
+          <div className="text-div-read-more">
             <h1> <strong>Title: </strong> { shopLocalData[0].volumeInfo.title }</h1>
             <h1> <strong> Language: </strong> { shopLocalData[0].volumeInfo.language }</h1>
             <h1> <strong> Author(s): </strong> { shopLocalData[0].volumeInfo.authors }</h1>
@@ -43,7 +71,7 @@ const ReadMore = () => {
             <h1> <strong> Publisher: </strong> { shopLocalData[0].volumeInfo.publisher }</h1>
             <h1> <strong> Version : </strong> { shopLocalData[0].volumeInfo.contentVersion }</h1>
             <h1>  Price: #<strong>5000</strong></h1>
-            <button><a href="https://paystack.com/pay/my-book-app">PURCHASE</a></button>
+            <button className="purchase-button"><a href="https://paystack.com/pay/my-book-app">PURCHASE</a></button>
           </div>
           
       </section>

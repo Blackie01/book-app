@@ -34,19 +34,46 @@ const MoreInfo = ({ Books, FirstInput }) => {
     setCurrentPage(pageNumber)
 
   };
+
+  // making nav responsive with useState
+const [isOpen, setIsOpen] = useState(false)
+
   ;
   return (
     <section className='overall-books-container'>
+
       <nav className="navigation-bar">
         <Link className="logoName" to="/homepage">
           <h2>BookSearch</h2>
         </Link>
-        <section>
+        <section className="hamburger-text">
           <ul className="nav-right">
             <li>About</li>
             <li>Contributors</li>
             <li>API docs</li>
+            <li>Sign up</li>
+          </ul> 
+        </section>
+
+        <section className="responsive-menu"
+        onClick = {() => setIsOpen(!isOpen)}
+        >
+          <div className="resp-menu"></div>
+          <div className="resp-menu"></div>
+          <div className="resp-menu"></div>
+
+        {isOpen && (
+          <>
+           <div className="overlay" onClick={() => setIsOpen(false)}></div>
+          <ul className="responsive-nav">
+            <li>About</li>
+            <li>Contributors</li>
+            <li>API docs</li>
+            <li>Sign up</li>
           </ul>
+          </>
+
+        )}
         </section>
       </nav>
      
@@ -56,7 +83,7 @@ const MoreInfo = ({ Books, FirstInput }) => {
 
               <div className='books' key={book.id} >
                   {book.volumeInfo.imageLinks ? <img src={book.volumeInfo.imageLinks.thumbnail} alt="book"/> : <img src= { noImage } alt="No Image" /> }
-                  <h2>{book.volumeInfo.title}</h2>
+                  <h2 className="book-title">{book.volumeInfo.title}</h2>
                   <Link to={`/readMore/${book.id}`}>
                   <button className="read-more">
                       
