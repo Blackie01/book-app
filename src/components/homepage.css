@@ -7,7 +7,7 @@
   padding: 0 60px 0 60px;
   color: #fff;
   font-size: small;
-  position: sticky;
+  /* position: sticky; */
   top: 0;
 }
 
@@ -231,13 +231,11 @@ input:focus {
     padding-top: 35px;
     align-items: center;
     text-align: center;
-    /* margin-top: -120px; */
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
     margin-left: 0;
     background-color: #012928ff;
     padding-bottom: 70px;
-    /* z-index: 1; */
 
 
     font-size: 13px;
@@ -290,6 +288,7 @@ input:focus {
     height: 400px;
     width: 60%;
 
+
     height: 325px;
     width: 40%;
     height: 220px;
@@ -312,10 +311,50 @@ input:focus {
   }
 
   .image4 {
-    margin-top: 20px;
+    margin-top: 100px;
     height: inherit;
     width: 100%;
     height: 110%;
+  }
+
+  .overall-homepage-body {
+    bottom: 0;
+    position: fixed;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+  }
+
+  .responsive-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 50vh;
+    /* background-color: rgba(161, 84, 84, 0.7); */
+    background-color: rgb(235, 102, 54, 0.7);
+    /* padding: auto; */
+    box-sizing: border-box;
+    overflow-y: scroll; 
+    z-index: 1;
+    text-align: center;
+    padding-top: 30%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: #fff;
+    font-size: 25px;
+    line-height: 50px;
+    margin-top: 3rem;
+  }
+
+  .navigation-bar {
+    z-index: 1;
   }
 }
 

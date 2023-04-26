@@ -12,6 +12,10 @@ function Homepage({ showCase, showMain }) {
   //     }
   // }
 
+//  Getting the hamburger button to work via useState
+
+const [isOpen, setIsOpen] = useState(false)
+
   return (
     <section className="overall-homepage-section">
       <nav className="navigation-bar">
@@ -27,10 +31,25 @@ function Homepage({ showCase, showMain }) {
           </ul> 
         </section>
 
-        <section className="responsive-menu">
+        <section className="responsive-menu"
+        onClick = {() => setIsOpen(!isOpen)}
+        >
           <div className="resp-menu"></div>
           <div className="resp-menu"></div>
           <div className="resp-menu"></div>
+
+        {isOpen && (
+          <>
+           <div className="overlay" onClick={() => setIsOpen(false)}></div>
+          <ul className="responsive-nav">
+            <li>About</li>
+            <li>Contributors</li>
+            <li>API docs</li>
+            <li>Sign up</li>
+          </ul>
+          </>
+
+        )}
         </section>
       </nav>
 

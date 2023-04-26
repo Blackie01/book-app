@@ -17,16 +17,21 @@
   width: 250px;
   width: 81%;
   height: 73%;
+  border-radius: 5px;
 }
 
 .read-more-container div {
   line-height: 1.8rem;
   background-color: #012928ff;
-  width: 290px;
-  height: 380px;
+  /* width: 290px; */
+  width: max-content;
+  height: max-content;
   font-size: 15px;
-  padding: 7px 0 0 20px;
+  /* padding: 7px 0 0 20px; */
   border-radius: 5px;
+  padding: 20px;
+  border: 1px solid white;
+
 }
 
 .read-more-container div h1 {
@@ -43,12 +48,12 @@
   cursor: pointer;
   margin-top: 13px;
   background-color: #013D3Bff;
-  color: black;
+
 }
 
 .read-more-container div button a {
   text-decoration: none;
-  color: black;
+  color: #eb6636;
 }
 
 
@@ -56,6 +61,11 @@
   /* background-color: whitesmoke; */
   /* color: black; */
   color: white;
+}
+
+.purchase-button a{
+  color: #eb6636;
+
 }
 
 
@@ -75,15 +85,16 @@
   .read-more-container img {
     width: 60%;
     height: 50%;
+    border-radius: 5px;
   }
 
   .read-more-container div {
     margin-top: 40px;
     margin-bottom: 40px;
     background-color: #012928ff;
-    height: 497px;
-    width: 275px;
-    padding: 10px 0 0 26px;
+    height: max-content;
+    width: max-content;
+    padding: 20px;
     border-radius: 5px;
     font-size: 14px;
   }
